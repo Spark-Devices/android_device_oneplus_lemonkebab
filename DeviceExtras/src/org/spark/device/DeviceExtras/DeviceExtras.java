@@ -53,7 +53,6 @@ import java.util.Arrays;
 import org.spark.device.DeviceExtras.Constants;
 import org.spark.device.DeviceExtras.doze.DozeSettingsActivity;
 import org.spark.device.DeviceExtras.FileUtils;
-import org.spark.device.DeviceExtras.kcal.KCalSettingsActivity;
 import org.spark.device.DeviceExtras.R;
 
 public class DeviceExtras extends PreferenceFragment
@@ -73,7 +72,6 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_FPS_INFO_TEXT_SIZE = "fps_info_text_size";
     public static final String KEY_GAME_SWITCH = "game_mode";
     public static final String KEY_HBM_SWITCH = "hbm";
-    public static final String KEY_KCAL = "kcal";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     private static ListPreference mFpsInfoPosition;
@@ -86,7 +84,6 @@ public class DeviceExtras extends PreferenceFragment
 
     private CustomSeekBarPreference mFpsInfoTextSizePreference;
     private Preference mDozeSettings;
-    private Preference mKcal;
     private ListPreference mBottomKeyPref;
     private ListPreference mMiddleKeyPref;
     private ListPreference mTopKeyPref;
@@ -102,14 +99,6 @@ public class DeviceExtras extends PreferenceFragment
         mDozeSettings = (Preference)findPreference(KEY_DOZE);
         mDozeSettings.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity().getApplicationContext(), DozeSettingsActivity.class);
-            startActivity(intent);
-            return true;
-        });
-
-        // Kcal Activity
-        mKcal = findPreference(KEY_KCAL);
-        mKcal.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
             startActivity(intent);
             return true;
         });
