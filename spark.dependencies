@@ -1,0 +1,12 @@
+[
+  {
+    "remote":      "devices",
+    "repository":  "device_oneplus_lemonkebab",
+    "target_path": "device/oneplus/lemonkebab"
+  },
+  {
+    "remote":      "devices",
+    "repository":  "vendor_oneplus_lemonkebab",
+    "target_path": "vendor/oneplus/lemonkebab"
+  }
+]
